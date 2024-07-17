@@ -1,0 +1,33 @@
+<div class="table-container">
+  <h1>CRUD PIENSA</h1>
+  <nz-table *ngIf="blogs.length > 0" [nzData]="blogs" [nzBordered]="true">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Authors</th>
+        <th>Create Date</th>
+        <th>Magazine</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let blog of blogs">
+        <td>{{ blog.title }}</td>
+        <td>{{ blog.description }}</td>
+        <td><img [src]="blog.imagenUrl" alt="{{ blog.title }}" width="100"></td>
+        <td>{{ blog.authors }}</td>
+        <td>{{ blog.createDate | date }}</td>
+        <td>{{ blog.magazine }}</td>
+        <td>
+          <a [routerLink]="['/blogs', blog.id]">View</a> |
+          <a [routerLink]="['/blogs', blog.id, 'edit']">Edit</a> |
+          <a *ngIf="blog.id" (click)="deleteBlog(blog.id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+
+  <a nz-button nzType="primary" routerLink="/blogs/new" class="new-blog-button">New Article</a>
+</div>

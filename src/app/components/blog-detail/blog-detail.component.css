@@ -1,0 +1,63 @@
+/* Contenedor principal del blog */
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título del blog */
+  .blog-container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Imagen del blog */
+  .blog-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Información del blog */
+  .blog-info {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Estilo para los botones */
+  .blog-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para los botones */
+  .blog-buttons a {
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Botón primario */
+  .blog-buttons a[nz-button][nzType="primary"] {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  /* Botón secundario */
+  .blog-buttons a[nz-button][nzType="default"] {
+    background-color: #6c757d;
+    border: none;
+  }
+  

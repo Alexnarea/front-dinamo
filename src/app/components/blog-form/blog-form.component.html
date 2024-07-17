@@ -1,0 +1,52 @@
+<div class="form-container">
+  <form nz-form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="title">Title</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input formControlName="title" id="title" />
+      </nz-form-control>
+    </nz-form-item>
+    
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="description">Description</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <textarea nz-input formControlName="description" id="description"></textarea>
+      </nz-form-control>
+    </nz-form-item>
+    
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="imagenUrl">Image URL</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input formControlName="imagenUrl" id="imagenUrl" />
+      </nz-form-control>
+    </nz-form-item>
+    
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="authors">Authors</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input formControlName="authors" id="authors" />
+      </nz-form-control>
+    </nz-form-item>
+    
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="createDate">Create Date</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input formControlName="createDate" id="createDate" type="date" />
+      </nz-form-control>
+    </nz-form-item>
+    
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="magazine">Magazine</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input formControlName="magazine" id="magazine" />
+      </nz-form-control>
+    </nz-form-item>
+    
+    <nz-form-item>
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary" [disabled]="blogForm.invalid">Submit</button>
+        <a nz-button nzType="default" [routerLink]="['/blogs']">Cancel</a>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>
